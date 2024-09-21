@@ -1,0 +1,26 @@
+[GLOBAL]
+pants_version = "2.22.0"
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.typecheck.mypy",
+]
+
+[source]
+root_patterns = [
+    '/',
+  'src',
+  'tests',
+]
+
+[python]
+interpreter_constraints = ['==3.12.*']
+enable_resolves = true
+
+
+[python.resolves]
+python-default = "lockfiles/default.lock"
+
+[pytest]
+args=["-W ignore::DeprecationWarning"]
