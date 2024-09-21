@@ -1,8 +1,8 @@
 pex_binary(
     name="tycoon",
-    #dependencies=[":lib"],
+    # dependencies=[":lib"],
     execution_mode="venv",
-    entry_point="src/tycoon/app.py"
+    entry_point="src/tycoon/app.py",
 )
 
 python_requirements(
